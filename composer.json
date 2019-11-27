@@ -1,0 +1,48 @@
+{
+    "name": "connectpx/laravelbuilder",
+    "description": "Simple page builder for laravel voyger.",
+    "keywords": [
+        "builder",
+        "laravel",
+        "voyger"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shahid Aali",
+            "email": "shahidhussainaali@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "tcg/voyager": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpcov": "~4.0|~5.0|~6.0",
+        "phpunit/phpunit": "~5.7.14|~6.1|~7.0|~8.0",
+        "laravel/framework": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|~6.0.0",
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Connectpx\\LaravelBuilder\\LaravelBuilderServiceProvider"
+            ],
+            "aliases": {
+                "LaravelBuilder": "Connectpx\\LaravelBuilder\\Facades\\LaravelBuilder"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Connectpx\\LaravelBuilder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Connectpx\\LaravelBuilder\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
